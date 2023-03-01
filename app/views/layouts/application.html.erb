@@ -9,14 +9,16 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+</head>
 
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-
-  </head>
 
   <body  >
     <main class="bg-emerald-500  min-h-screen grid place-content-center" >
+    <% flash.each do |name,value|%>
+    <p class="bg-red-500 text-red-500 text-center">
+    <%= value %>
+    </p>
+    <% end %>
       <%= yield %>
     </main>
   </body>

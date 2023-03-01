@@ -16,12 +16,15 @@
     <%= render "layouts/navbar" %>
     <main class="bg-clip-border p-6 bg-white-600 border-4 border-gray-600 border-dashed  min-w-screen h-[42.5vw] grid place-content-center" >
     <% flash.each do |name,value|%>
+      <%if value == "Signed out successfully."%>
     <p class=" text-red-500 text-lg">
     <%= value %>
-    <%if value == "Signed out successfully."%>
-    <% puts "estas en lo cierto"%>
     </p>
-    <% end%>
+   <%else%>
+    <p class=" text-green-500 text-lg">
+    <%= value %>
+    </p>
+    <%end%>
     <% end %>
       <%= yield %>
     </main>

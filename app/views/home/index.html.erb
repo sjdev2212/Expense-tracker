@@ -1,19 +1,24 @@
 <main class="border-2  w-[55rem] h-[30rem] flex items-center flex-col">
-<div class="">
-<h1 class="text-3xl mb-5 mt-3">
-
- Welcome to Expense Tracker
-</h1>
-</div>
-<div class="mb-5">
-<%= link_to "Login",  new_user_session_path   %> 
-</div>
-<div class="mb-5 flex items-center flex-col ">
-<p> Don't have an account? </p>
-<%= link_to "Sign up",  new_user_registration_path %>
-</div>
-<div class="mb-5">
-  <%=button_to "logout", destroy_user_session_path, method: :delete,class:"bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" %>
+  <div class="">
+    <h1 class="text-3xl mb-5 mt-3">
+      Welcome to Expense Tracker
+    </h1>
   </div>
-  
+  <% if user_signed_in?%>
+    <p>
+      Welcome <%= current_user.name %>! 
+    </p>
+    <div class="mb-5">
+      <%=button_to "logout", destroy_user_session_path, method: :delete,class:"bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" %>
+    </div>
+    .
+  <% else %>
+    <div class="mb-5">
+      <%= link_to "Login",  new_user_session_path   %>
+    </div>
+    <div class="mb-5 flex items-center flex-col ">
+      <p> Don't have an account? </p>
+      <%= link_to "Sign up",  new_user_registration_path %>
+    </div>
+  <% end %>
 </main>

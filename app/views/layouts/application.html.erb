@@ -14,11 +14,14 @@
 
   <body  >
     <%= render "layouts/navbar" %>
-    <main class="bg-emerald-500  min-h-screen grid place-content-center" >
+    <main class="bg-clip-border p-6 bg-white-600 border-4 border-gray-600 border-dashed  min-w-screen h-[42.5vw] grid place-content-center" >
     <% flash.each do |name,value|%>
-    <p class=" text-red-500 text-center">
+    <p class=" text-red-500 text-lg">
     <%= value %>
+    <%if value == "Signed out successfully."%>
+    <% puts "estas en lo cierto"%>
     </p>
+    <% end%>
     <% end %>
       <%= yield %>
     </main>

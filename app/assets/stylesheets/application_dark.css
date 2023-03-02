@@ -1,6 +1,10 @@
-* {
-    background-color: #222324;
-  }
- * {
-    color: rgb(240, 248, 255);
- }
+
+
+  .navbar {
+ display : flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 6vw;
+  background-color: whitesmoke ;
+  color: slategrey;
+}

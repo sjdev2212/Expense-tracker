@@ -1,9 +1,28 @@
+
 * {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5vw;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+.main {
     background-color: #f6faff;
+    color: #222324;
   }
-    .title 
-        {
-            color: #222324;
-        }
-  
-  
+.navbar {
+  display : flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 6vw;
+  background-color: rgb(93, 102, 93);
+  color: rgb(240, 248, 255);
+}
+/* ---------------------------------- */
+.signup-container{
+  background-color: aqua;
+  width: 60%;
+  border: 2px solid #212121;
+}

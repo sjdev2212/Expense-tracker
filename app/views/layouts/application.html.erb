@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Mysite</title>
+    <title>Expense tracker</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
     <% if cookies[:moon] %>
     <%= stylesheet_link_tag 'application_dark', media: 'all', 'data-turbolinks-track': 'reload' %>
     <% else %>
@@ -18,14 +17,14 @@
 
   <body  >
     <%= render "layouts/navbar" %>
-    <main class="bg-clip-border p-6 bg-white-600 border-4 border-gray-600 border-dashed w-full h-[42.5vw] grid place-content-center" >
+    <main class="main" >
     <% flash.each do |name,value|%>
       <%if value == "Signed out successfully."%>
-    <p class=" text-red-500 text-lg">
+    <p>
     <%= value %>
     </p>
    <%else%>
-    <p class=" text-green-500 text-lg">
+    <p>
     <%= value %>
     </p>
     <%end%>

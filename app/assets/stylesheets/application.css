@@ -4,8 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #ADD8E6;
-
+  background-color: #add8e6;
 }
 
 .main {
@@ -41,12 +40,10 @@
   border-radius: 18px;
   box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
   width: 40vw;
-
 }
 
 .signup-container:hover {
   box-shadow: #151a1a 10px 10px 10px 10px;
- 
 }
 
 .button-signup {
@@ -64,10 +61,9 @@
   background-color: #d41111;
   color: #1e2121;
   border: 2px solid #3aabab;
-
 }
 
-.inputs { 
+.inputs {
   background-color: #ffffff;
   color: #0d0e0e;
   border: 2px solid #212121;
@@ -79,21 +75,38 @@
   margin-bottom: 0.8vw;
 }
 .inputs::placeholder {
-color : rgb(108, 59, 67);
-font-weight: bold;
-font-size:1.3vw ;
-text-transform: capitalize;
-} 
- .title-cont{ 
+  color: rgb(108, 59, 67);
+  font-weight: bold;
+  font-size: 1.3vw;
+  text-transform: capitalize;
+}
+.title-cont {
   display: flex;
   flex-direction: column;
   justify-content: center;
- }
-  .title-cont h2{
-    font-size: 2.7vw;
-    font-weight: bold;
-    color: rgb(25, 25, 28);
-    margin-bottom: 1vw;
-    margin-top: 1vw;
-  }
-  
+}
+.title-cont h2 {
+  font-size: 2.7vw;
+  font-weight: bold;
+  color: rgb(25, 25, 28);
+  margin-bottom: 1vw;
+  margin-top: 1vw;
+}
+
+/* ---------------------------------- home light*/
+.home-container {
+  display: flex;
+  flex-direction: column;
+  margin: 1vw;
+  align-items: center;
+  width: auto;
+  height: 39vw;
+  border: 2px solid #212121;
+}
+.welcome {
+  margin-top: 4vw;
+  font-size: 2.4vw;
+  font-weight: bold;
+  color: rgb(25, 25, 28);
+}
+

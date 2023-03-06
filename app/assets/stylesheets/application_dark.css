@@ -39,14 +39,14 @@ body {
   align-items: center;
   background-color: rgb(156, 182, 182);
   height: 32.4vw;
-  border-radius: 18px;
-  box-shadow: 14px 14px 20px #013569, -14px -14px 20px rgb(11, 25, 113);
+  border-radius: 45px;
+  box-shadow: 0 3px 50px 0 rgba(45, 60, 226, 0.2), 0 1px 50px 0 rgba(0,0,0,0.19);
   width: 40vw;
 
 }
 
 .signup-container:hover {
-  box-shadow: #151a1a 10px 10px 10px 10px;
+  box-shadow: #0a5b5b 10px 10px 10px 10px;
  
 }
 

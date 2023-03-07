@@ -20,19 +20,61 @@ body {
   color: antiquewhite;
 }
 
+/* ---------------------------------- navbar dark*/
 .navbar {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   height: 6vw;
-  color: rgb(140, 153, 166);
+  color: rgb(142, 142, 229);
+  width: auto;
 }
-
+.icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.icon span {
+  margin-right: 1vw;
+  font-size: 1.2vw;
+  font-weight: bold;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
 .logo {
   width: 4vw;
   height: 4vw;
   margin-top: 5px;
-  padding-right: 15px;
+  margin-right: 15px;
+  border-radius: 50%;
+}
+.logo:hover {
+  box-shadow: #484b4b 0px 0px 3px 3px;
+}
+.sign-out {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  right: 6vw;
+}
+.sign-out-btn {
+  background-color: #c9dede;
+  color: #413737;
+  border: 4px solid #1a1818;
+  border-radius: 8px;
+  width: 10vw;
+  height: 3.6vw;
+  font-size: 1.5vw;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+  margin-right: 1vw;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.sign-out-btn:hover {
+  background-color: #e5ec83;
+  color: #1e2121;
+  border: 2px solid #3aabab;
 }
 
 /* ---------------------------------- sign up dark*/
@@ -109,4 +151,20 @@ body {
   color: rgb(25, 25, 28);
   margin-bottom: 1vw;
   margin-top: 1vw;
+}
+/* ---------------------------------- home dark*/
+.home-container {
+  display: flex;
+  flex-direction: column;
+  margin: 1vw;
+  align-items: center;
+  width: auto;
+  height: 39vw;
+  border: 2px solid #212121;
+}
+.welcome {
+  margin-top: 4vw;
+  font-size: 2.4vw;
+  font-weight: bold;
+  color: rgb(25, 25, 28);
 }

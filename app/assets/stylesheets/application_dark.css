@@ -4,26 +4,37 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-image: radial-gradient( circle 610px at 5.2% 51.6%,  rgba(5,8,114,1) 0%, rgba(7,3,53,1) 97.5% );
-  
-
+  background-image: radial-gradient(
+    circle 610px at 5.2% 51.6%,
+    rgba(5, 8, 114, 1) 0%,
+    rgba(7, 3, 53, 1) 97.5%
+  );
 }
 
 .main {
-  background-color  :	#002244;
+  background-image: radial-gradient(
+    circle 610px at 5.2% 51.6%,
+    rgba(5, 8, 114, 1) 0%,
+    rgba(7, 3, 53, 1) 97.5%
+  );
   color: antiquewhite;
 }
 
-  
-  
-  .navbar {
- display : flex;
+.navbar {
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
   height: 6vw;
-  background-color: #2c3968 ;
   color: rgb(140, 153, 166);
 }
+
+.logo {
+  width: 4vw;
+  height: 4vw;
+  margin-top: 5px;
+  padding-right: 15px;
+}
+
 /* ---------------------------------- sign up dark*/
 .main-reg {
   display: flex;
@@ -40,14 +51,13 @@ body {
   background-color: rgb(156, 182, 182);
   height: 32.4vw;
   border-radius: 45px;
-  box-shadow: 0 3px 50px 0 rgba(45, 60, 226, 0.2), 0 1px 50px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 3px 50px 0 rgba(45, 60, 226, 0.2),
+    0 1px 50px 0 rgba(0, 0, 0, 0.19);
   width: 40vw;
-
 }
 
 .signup-container:hover {
-  box-shadow: #0a5b5b 10px 10px 10px 10px;
- 
+  box-shadow: #424b4b 0px 0px 5px 5px;
 }
 
 .button-signup {
@@ -61,14 +71,14 @@ body {
   margin-top: 1vw;
   margin-bottom: 1vw;
 }
-.button-signup:hover {
-  background-color: #d41111;
-  color: #1e2121;
-  border: 2px solid #3aabab;
 
+.button-signup:hover {
+  background-color: #487141;
+  color: #1e2121;
+  border: 2px solid #1d3b3b;
 }
 
-.inputs { 
+.inputs {
   background-color: #ffffff;
   color: #0d0e0e;
   border: 2px solid #212121;
@@ -79,21 +89,24 @@ body {
   margin-top: 0.8vw;
   margin-bottom: 0.8vw;
 }
+
 .inputs::placeholder {
-color : rgb(108, 59, 67);
-font-weight: bold;
-font-size:1.3vw ;
-text-transform: capitalize;
-} 
- .title-cont{ 
+  color: rgb(108, 59, 67);
+  font-weight: bold;
+  font-size: 1.3vw;
+  text-transform: capitalize;
+}
+
+.title-cont {
   display: flex;
   flex-direction: column;
   justify-content: center;
- }
-  .title-cont h2{
-    font-size: 2.7vw;
-    font-weight: bold;
-    color: rgb(25, 25, 28);
-    margin-bottom: 1vw;
-    margin-top: 1vw;
-  }
+}
+
+.title-cont h2 {
+  font-size: 2.7vw;
+  font-weight: bold;
+  color: rgb(25, 25, 28);
+  margin-bottom: 1vw;
+  margin-top: 1vw;
+}

@@ -1,7 +1,7 @@
 <section>
     <nav class="navbar">
-    <div >
-    Expense tracker
+    <div class="icon" >
+<%= image_tag("savings.png", style: 'height:4.8vw;width:4.8vw; margin: 5px;')%>
     </div>
        <% if user_signed_in?%>
   
@@ -18,9 +18,9 @@
     </div>
   <% end %>
   <% if cookies[:moon] %>
-<%= button_to 'Light Mode', sun_path, method: :get, class:"toggle"%>
+<%= link_to  image_tag("sun.png", class:"logo"), sun_path, method: :get%>
 <% else %>
-<%= button_to 'Dark Mode', moon_path, method: :get%>
+<%= link_to image_tag("moon.png", class:"logo"), moon_path, method: :get%>
 <% end %>
        
     </nav>

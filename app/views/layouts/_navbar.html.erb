@@ -1,27 +1,28 @@
 <section>
-    <nav class="navbar">
+  <nav class="navbar">
     <div class="icon" >
-<%= image_tag("savings.png", style: 'height:4.8vw;width:4.8vw; margin: 5px;')%>
+      <%= image_tag("money.png", style: 'height:4.8vw;width:4.8vw; margin: 5px;')%> <span>Expense Tracker</span>
     </div>
-       <% if user_signed_in?%>
-  
-    <div class="">
-      <%=button_to "logout", destroy_user_session_path, method: :delete,class:"" %>
-    </div>
-  <% else %>
-    <div>
-      <%= link_to "Login",  new_user_session_path   %>
-    </div>
-    <div>
-     
-      <%= link_to "Sign up",  new_user_registration_path %>
-    </div>
-  <% end %>
-  <% if cookies[:moon] %>
-<%= link_to  image_tag("sun.png", class:"logo"), sun_path, method: :get%>
-<% else %>
-<%= link_to image_tag("moon.png", class:"logo"), moon_path, method: :get%>
-<% end %>
-       
-    </nav>
+    <% if user_signed_in?%>
+      <div class="sign-out">
+        <%=button_to "Sign out", destroy_user_session_path, method: :delete,class:"sign-out-btn" %>
+      </div>
+    <% else %>
+      <div class="log-in">
+        <%= link_to "Login",  new_user_session_path ,class:"log-in-btn"   %>
+      </div>
+      <div class="sign-up" >
+        <%= link_to "Sign up",  new_user_registration_path, class:"sign-up-btn" %>
+      </div>
+    <% end %>
+    <% if cookies[:moon] %>
+      <div class="toggles">
+        <%= link_to  image_tag("sun.png", class:"logo"), sun_path, method: :get%>
+      </div>
+    <% else %>
+      <div class="toggles">
+        <%= link_to image_tag("moon.png", class:"logo"), moon_path, method: :get%>
+      </div>
+    <% end %>
+  </nav>
 </section>

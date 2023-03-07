@@ -11,16 +11,17 @@ class Users::SessionsController < Devise::SessionsController
     super
     flash[:notice] = "Welcome to the site!"
   end
+
   # POST /resource/sign_in
   def create
-     super
-   end
+    super
+  end
 
   # DELETE /resource/sign_out
-   def destroy
-     super
-     redirect_to root_path
-   end
+  def destroy
+    super
+    redirect_to root_path
+  end
 
   # protected
 

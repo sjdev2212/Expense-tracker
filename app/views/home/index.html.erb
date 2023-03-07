@@ -1,4 +1,17 @@
 <main class="home-container">
+<div>
+   <% flash.each do |name,value|%>
+      <%if value == "Signed out successfully."%>
+    <p  class="signing-out">
+    <%= value %>
+    </p>
+   <%else%>
+    <p class="signing-in" >
+    <%= value %>
+    </p>
+    <%end%>
+    <% end %>
+  </div>
   <div class="">
     <h1 class="welcome">
       Welcome to Expense Tracker
@@ -7,9 +20,28 @@
        <% if user_signed_in?%>
        <di class="user-welcome">
     <p>
-      Welcome <%= current_user.name %>! 
+      Hello <%= current_user.name %>! 
     </p>
     </di>
+
+     <section>
+    <h2>
+      Your expenses
+    </h2>
+    <% @expenses.each do |expense |%>
+    <p>
+      <%= expense.name %>
+    </p>
+    <p>
+      <%= expense.amount %>
+    </p>
+  
     <%end%>
+    <%= link_to "Add expense",  new_expense_path  %>
+    <%end%>
+   
+
+    </section>
+
  
 </main>

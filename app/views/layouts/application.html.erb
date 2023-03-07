@@ -18,18 +18,7 @@
   <body  >
     <%= render "layouts/navbar" %>
     <main class="main" >
-    <% flash.each do |name,value|%>
-      <%if value == "Signed out successfully."%>
-    <p>
-    <%= value %>
-    </p>
-   <%else%>
-    <p>
-    <%= value %>
-    </p>
-    <%end%>
-    <% end %>
-      <%= yield %>
+   <%= yield %>
     </main>
   </body>
 </html>

@@ -18,5 +18,4 @@ class ApplicationController < ActionController::Base
     cookies.delete(:moon)
     redirect_to root_path
   end
-
 end

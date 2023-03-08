@@ -1,0 +1,58 @@
+     <section>
+    <h2>
+      Your expenses
+    </h2>
+    <% if current_user.expenses.empty? %>
+      <p>
+        You have no expenses yet.
+      </p>
+      <%= link_to "Add expense" , new_expense_path%>
+    <% else %>
+
+        <table>
+            <thead>
+            <tr>
+                <th>
+                Name
+                </th>
+                <th>
+                Amount
+                </th>
+                   <th>
+                Description
+                </th>
+             
+                <th>
+                Actions
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <% current_user.expenses.each do |expense| %>
+                <tr>
+                <td>
+                    <%= expense.name %>
+                </td>
+                  <td>
+                    <%= expense.description %>
+                </td>
+                <td>
+                    <%= expense.amount %>
+                </td>
+               
+               
+                <td>
+                   
+                    <%= button_to "Delete", "/expenses/#{expense.id}", method: :delete, data: { confirm: "Are you sure?" } %>
+                </td>
+                </tr>
+            <% end %>
+            </tbody>
+        </table>
+         <%= link_to "Add expense" , new_expense_path%>
+    
+    <%end%>
+ 
+   
+
+    </section>

@@ -1,7 +1,6 @@
 class ExpensesController < ApplicationController
   def index
     @expenses = current_user.expenses
-  
   end
 
   def show
@@ -16,7 +15,7 @@ class ExpensesController < ApplicationController
     expense = current_user.expenses.new(expense_params)
     if expense.save
       redirect_to root_path
-      flash[:success] = 'The category was saved successfully!'
+      flash[:success] = 'The expense was saved successfully!'
     else
       flash.now[:error] = @expense.errors.full_messages
       redirect_to root_path
@@ -34,7 +33,6 @@ class ExpensesController < ApplicationController
   end
 
   def update
- 
   end
 
   private

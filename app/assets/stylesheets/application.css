@@ -35,6 +35,23 @@ body {
 }
 .add-expense{ 
 margin: 1vw;
+display: flex;
+border: 2px solid gold;
+flex-direction: row;
+width:70vw ;
+}
+.add-expense h2{
+  justify-self: start;
+  font-size: 2vw;
+}
+.add {
+  justify-self: end;
+  border: 2px solid green;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  left: 39vw;
 
 }
 .add-expense-btn {

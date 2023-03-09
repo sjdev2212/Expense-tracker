@@ -14,6 +14,9 @@ body {
 .main {
   background-color: #add8e6;
   color: #0d0e0e;
+  margin: 0;
+  padding: 0;
+  border: 10px solid purple;
 }
 .expenses{
 display: flex;
@@ -29,23 +32,7 @@ overflow-y: auto;
 
 
 }
-table, th, td {
-  border: 1px solid rgb(4, 4, 63);
-}
 
-.signing-out {
-  font-size: 1.5vw;
-  font-weight: 600;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #1ada1a;
-
-}
-.signing-in{
-  font-size: 1.5vw;
-  font-weight: 600;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #ba1ada;
-}
 
 /* ---------------------------------- navbar light*/
 .navbar {
@@ -188,17 +175,61 @@ align-items: center;
 
 /* ---------------------------------- home light*/
 .home-container {
-  display: flex;
-  flex-direction: column;
-  margin: 1vw;
-  align-items: center;
+ display : grid;
+  grid-template-rows: 1fr 1fr;
+  justify-content: space-around;
+  margin-top: 2vw;
   width: auto;
-  height: 39vw;
-  border: 2px solid #212121;
+  height: 15vw;
+
+
 }
 .welcome {
   margin-top: 4vw;
   font-size: 2.4vw;
   font-weight: bold;
   color: rgb(25, 25, 28);
+}
+table, th, td {
+  border: 1px solid rgb(4, 4, 63);
+}
+
+.signing-out {
+  font-size: 1.1vw;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #0a0c99;
+
+}
+.out-flash{
+
+  justify-self: start;
+}
+.signing-in{
+  font-size: 1.5vw;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1a27da;
+}
+.title-welcome{
+
+
+}
+.user-welcome{
+
+  height: 2vw;
+  position: relative;
+  left : 88vw;
+  top: -2vw;
+  font-size: 1.1vw;
+  width: 10vw;
+  text-align: center;
+  font-weight: 600;
+}
+.flashes{
+  display: flex;
+ flex-direction: row;
+  height: 2vw;
+
+
 }

@@ -25,6 +25,7 @@ class ExpensesController < ApplicationController
   def destroy
     @expense = current_user.expenses.find(params[:id])
     @expense.destroy
+    flash[:success] = 'The expense was deleted successfully!'
     redirect_to root_path
   end
 

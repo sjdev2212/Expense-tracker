@@ -1,16 +1,21 @@
-     <section>
-    <h2>
-      Your expenses
-    </h2>
+     <section class="expenses-empty" >
+  
     <% if current_user.expenses.empty? %>
       <p>
         You have no expenses yet.
       </p>
-      <%= link_to "Add expense" , new_expense_path%>
+      <%= button_to "Add expense" , "/expenses/new",  :method => :get%>
     <% else %>
 
 <section class="expenses">
-        <table>
+    <div class="add-expense">
+        <%= button_to "Add expense" , "/expenses/new",  :method => :get%>
+    </div>
+    
+  <h2>
+      Your expenses
+    </h2>
+        <table class="table">
             <thead>
             <tr>
                 <th>
@@ -35,10 +40,10 @@
                     <%= expense.name %>
                 </td>
                   <td>
-                    <%= expense.description %>
+                    <%= expense.amount %>
                 </td>
                 <td>
-                    <%= expense.amount %>
+                    <%= expense.description %>
                 </td>
                
                
@@ -51,8 +56,7 @@
             </tbody>
         </table>
     </section>
-         <%= link_to "Add expense" , new_expense_path%>
-    
+
     <%end%>
  
    

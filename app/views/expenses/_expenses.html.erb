@@ -4,17 +4,19 @@
       <p>
         You have no expenses yet.
       </p>
-      <%= button_to "Add expense" , "/expenses/new",  :method => :get%>
+      <%= button_to "Add expense" , "/expenses/new",  :method => :get, class:%>
     <% else %>
 
 <section class="expenses">
     <div class="add-expense">
-        <%= button_to "Add expense" , "/expenses/new",  :method => :get%>
-    </div>
-    
   <h2>
       Your expenses
     </h2>
+    <div class="add">
+        <%= button_to "Add expense" , "/expenses/new",  :method => :get%>
+        </div>
+    </div>
+    
         <table class="table">
             <thead>
             <tr>

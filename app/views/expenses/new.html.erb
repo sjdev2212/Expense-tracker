@@ -1,4 +1,7 @@
+<%= turbo_frame_tag "modal" do %>
 <%= form_with model: @expense, url: expenses_path  do |f| %>
+<div class="modal">
+
   <p>
     <%= f.label :name %><br>
     <%= f.text_field :name %>
@@ -16,5 +19,13 @@
   <p>
     <%= f.submit %>
   </p>
-  <%= link_to "Go back" , root_path%>
+   <div>
+      <%= button_tag "Cancel",  data: {
+        controller: "modal",
+        action: "modal#close",
+      }, class: "cancel-button" %>
+    </div>
+</div>
+
+<% end %>
 <% end %>

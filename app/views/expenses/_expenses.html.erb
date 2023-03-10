@@ -4,7 +4,7 @@
       <p>
         You have no expenses yet.
       </p>
-      <%= button_to "Add expense" , "/expenses/new",  :method => :get, class:%>
+      <%= button_to "Add expense" , "/expenses/new", data: { turbo_frame: 'modal' },  :method => :get, class:%>
     <% else %>
 
 <section class="expenses">
@@ -13,7 +13,7 @@
       Your expenses
     </h2>
     <div class="add">
-        <%= button_to "Add expense" , "/expenses/new",  :method => :get%>
+        <%= button_to "Add expense" , "/expenses/new", data: { turbo_frame: 'modal' }, :method => :get ,class: "add-expense-btn"%>
         </div>
     </div>
     
@@ -51,7 +51,7 @@
                
                 <td>
                    
-                    <%= button_to "Delete", "/expenses/#{expense.id}", method: :delete, data: { confirm: "Are you sure?" } %>
+                    <%= button_to "Delete", "/expenses/#{expense.id}", method: :delete, data: { confirm: "Are you sure?" }, class: "delete-btn" %>
                 </td>
                 </tr>
             <% end %>

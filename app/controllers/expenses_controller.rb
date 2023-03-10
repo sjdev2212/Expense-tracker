@@ -17,7 +17,7 @@ class ExpensesController < ApplicationController
       redirect_to root_path
       flash[:success] = 'The expense was saved successfully!'
     else
-      flash.now[:error] = @expense.errors.full_messages
+
       redirect_to root_path
     end
   end

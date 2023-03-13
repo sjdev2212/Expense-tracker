@@ -3,5 +3,6 @@
 #
 # Examples:
 #
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+  categories = Category.create([{ name: 'Food' }, { name: 'Transportation' }, { name: 'Entertainment' }, 
+    { name: 'Clothing' }, { name: 'Housing' }, {name: 'Car'}, {name: 'Travel'}, {name: 'Creditcards'},
+    {name: 'Cellphone'},{name: 'Health'}, {name: 'Education'},{ name: 'Other' },])

@@ -1,66 +1,87 @@
-     <section class="expenses-empty" >
-  
-    <% if current_user.expenses.empty? %>
-      <p>
-        You have no expenses yet.
-      </p>
-      <%= button_to "Add expense" , "/expenses/new", data: { turbo_frame: 'modal' },  :method => :get, class:%>
-    <% else %>
-
-<section class="expenses">
-    <div class="add-expense">
-  <h2>
-      Your expenses
-    </h2>
-    <div class="add">
-        <%= button_to "Add expense" , "/expenses/new", data: { turbo_frame: 'modal' }, :method => :get ,class: "add-expense-btn"%>
+  <p>Aver que ondas</p>
+     
+<section class="expenses-empty" >
+  <% if current_user.expenses.empty? %>
+    <p>
+      You have no expenses yet
+    </p>
+    <%= button_to "Add expense" , "/expenses/new", data: { turbo_frame: 'modal' },  :method => :get, class:%>
+  <% else %>
+    <section class="expenses">
+      <div class="add-expense">
+        <h2>
+          Your expenses
+        </h2>
+        <div class="add">
+          <%= button_to "Add expense" , "/expenses/new", data: { turbo_frame: 'modal' }, :method => :get ,class: "add-expense-btn"%>
         </div>
-    </div>
-    
-        <table class="table">
-            <thead>
+      </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>
+              Name
+            </th>
+            <th>
+              Amount
+            </th>
+            <th>
+              Description
+            </th>
+            <th>
+              Category
+            </th>
+            <th>
+              Actions
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <% current_user.expenses.each do |expense| %>
             <tr>
-                <th>
-                Name
-                </th>
-                <th>
-                Amount
-                </th>
-                   <th>
-                Description
-                </th>
-             
-                <th>
-                Actions
-                </th>
+              <td>
+                <%= expense.name %>
+              </td>
+              <td>
+                $<%= expense.amount %>
+              </td>
+              <td>
+                <%= expense.description %>
+              </td>
+              <td>
+                <% if expense.category  == "Food" %>
+                  <%= image_tag  ("food.png"), class:'icon-food'  %>
+                <% elsif expense.category  == "Transportation"  %>
+                  <%= image_tag  ("Transportation.png"), class:'icon-trans'  %>
+                <% elsif expense.category  == "Car"  %>
+                  <%= image_tag  ("Car.png"), class:'icon-car'  %>
+                <% elsif expense.category  == "Housing"  %>
+                  <%= image_tag  ("Housing.png") , class:'icon-house' %>
+                <% elsif expense.category  == "Cellphone"  %>
+                  <%= image_tag  ("Cellphone.png") , class:'icon-cell' %>
+                <% elsif expense.category  == "Entertainment"  %>
+                  <%= image_tag  ("Entertainment.png"), class:'icon-ent'  %>
+                <% elsif expense.category  == "Clothing"  %>
+                  <%= image_tag  ("Clothing.png"), class:'icon-cloth'  %>
+                <% elsif expense.category  == "Health"  %>
+                  <%= image_tag  ("Health.png"), class:'icon-health'  %>
+                <% elsif expense.category  == "Education"  %>
+                  <%= image_tag  ("Education.png"), class:'icon-edu'  %>
+                <% elsif expense.category  == "Travel"  %>
+                  <%= image_tag  ("Travel.png"), class:'icon-travel'  %>
+                <% elsif expense.category  == "Creditcards"  %>
+                  <%= image_tag  ("Creditcards.png"), class:'icon-credit'  %>
+                <% elsif expense.category  == "Other"  %>
+                  <%= image_tag  ("Other.png"), class:'icon-other'  %>
+                <%end%>
+              </td>
+              <td>
+                <%= button_to "Delete", "/expenses/#{expense.id}", method: :delete, data: { confirm: "Are you sure?" }, class: "delete-btn" %>
+              </td>
             </tr>
-            </thead>
-            <tbody>
-            <% current_user.expenses.each do |expense| %>
-                <tr>
-                <td>
-                    <%= expense.name %>
-                </td>
-                  <td>
-                    <%= expense.amount %>
-                </td>
-                <td>
-                    <%= expense.description %>
-                </td>
-               
-               
-                <td>
-                   
-                    <%= button_to "Delete", "/expenses/#{expense.id}", method: :delete, data: { confirm: "Are you sure?" }, class: "delete-btn" %>
-                </td>
-                </tr>
-            <% end %>
-            </tbody>
-        </table>
+          <% end %>
+        </tbody>
+      </table>
     </section>
-
-    <%end%>
- 
-   
-
-    </section>
+  <%end%>
+</section>

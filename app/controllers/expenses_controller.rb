@@ -1,6 +1,7 @@
 class ExpensesController < ApplicationController
   def index
     @expenses = current_user.expenses
+    @categories = current_user.categories
   end
 
   def show
@@ -39,6 +40,6 @@ class ExpensesController < ApplicationController
   private
 
   def expense_params
-    params.require(:expense).permit(:name, :description, :amount, :user_id)
+    params.require(:expense).permit(:name, :description, :amount, :category, :user_id)
   end
 end

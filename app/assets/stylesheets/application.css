@@ -362,5 +362,74 @@ cursor: pointer;
   margin-bottom: 1vw;
   margin-top: 1vw;
 }
-
-
+.icon-food {
+  width: 4vw;
+  height: 3.2vw;
+  border-radius: 28%;
+  padding-left: 10px;
+}
+.icon-trans{
+  width: 3.8vw;
+  height: 3.2vw;
+  border-radius: 28%;
+  padding-left: 10px;
+}
+.icon-ent{
+  width: 3.8vw;
+  height: 3.2vw;
+  border-radius: 20%;
+  padding-left: 10px;
+}
+.icon-cloth{
+  width: 4.1vw;
+  height: 3.2vw;
+  border-radius: 20%;
+  padding-left: 10px;
+}
+.icon-house{
+  width: 4vw;
+  height: 3.2vw;
+  border-radius: 14%;
+  padding-left: 10px;
+}
+.icon-car{
+  width: 4vw;
+  height: 3.2vw;
+  border-radius: 14%;
+  padding-left: 10px;
+}
+.icon-travel{
+  width: 4vw;
+  height: 3.2vw;
+  border-radius: 14%;
+  padding-left: 10px;
+}
+.icon-credit{
+  width: 4vw;
+  height: 3.3vw;
+  border-radius: 14%;
+  padding-left: 10px;
+}
+.icon-cell{
+  width: 4vw;
+  height: 3.3vw;
+  border-radius: 14%;
+  padding-left: 10px;
+}
+.icon-health{
+  width: 4vw;
+  height: 3.2vw;
+  border-radius: 14%;
+  padding-left: 10px;
+}
+.icon-edu{
+  width: 4.1vw;
+  height: 3.2vw;
+  border-radius: 14%;
+  padding-left: 10px;
+}
+.icon-other{
+  width: 4.2vw;
+  height: 3.1vw;
+  padding-left: 10px;
+}

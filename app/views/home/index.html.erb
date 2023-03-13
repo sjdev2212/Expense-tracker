@@ -1,55 +1,39 @@
 <div class="flashes">
   <% flash.each do |name,value|%>
-      <%if value == "Signed out successfully."%>
+    <%if value == "Signed out successfully."%>
       <div class="out-flash">
-    <p  class="signing-out">
-    <%= value %>
-    </p>
-    </div>
-   <%else%>
-    <p class="signing-in" >
-    <%= value %>
-    </p>
+        <p  class="signing-out">
+          <%= value %>
+        </p>
+      </div>
+    <%else%>
+      <p class="signing-in" >
+        <%= value %>
+      </p>
     <%end%>
-    <% end %>
-    
+  <% end %>
 </div>
 <div>
   <% if user_signed_in?%>
-       <div class="user-welcome">
-    <p>
-      Hello <%= current_user.name %>! 
-    </p>
-    </div>
-    <%else%>
     <div class="user-welcome">
-    <p>
-   Please Log in or Sign up to start tracking your expenses.
-    </p>
+      <p>
+        Hello <%= current_user.name %>! 
+      </p>
+    </div>
+  <%else%>
+    <div class="user-welcome">
+      <p>
+        Please Log in or Sign up to start tracking your expenses
+      </p>
     <%end%>
-
- 
-  </div>  
-
-<main class="home-container">
-     
-    <div class="title-welcome">
-    <h1 class="welcome">
-      Welcome to Expense Tracker.
-
-
-
-
-
-    </h1>
   </div>
-<% if user_signed_in?%>
-    <%= render "expenses/expenses" %>
+  <main class="home-container">
+    <div class="title-welcome">
+      <h1 class="welcome">
+        Welcome to Expense Tracker
+      </h1>
+    </div>
+    <% if user_signed_in?%>
+      <%= render "expenses/expenses" %>
     <%end%>
-
-
-
-</main>
-    
-
- 
+  </main>

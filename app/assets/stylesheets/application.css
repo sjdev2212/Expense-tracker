@@ -1,21 +1,25 @@
+/*
+ *= require font-awesome
+ */
+/*-----------------------------body-light*/
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.5vw;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: rgb(205,204,227);
-  background: linear-gradient(90deg, rgba(205,204,227,1) 0%, rgba(238,218,218,0.9084500010941877) 78%, rgba(212,212,237,1) 92%, rgba(180,218,226,1) 100%);
+  background-color: whitesmoke;
 }
 
 .main {
-  background-color: #add8e6;
+  background-color: whitesmoke;
   color: #0d0e0e;
   margin: 0;
   padding: 0;
   border: 10px solid #041e42;
   min-height: 41vw;
 }
+/*-----------------------------home light*/
 .expenses {
   display: flex;
   margin: auto;
@@ -24,22 +28,22 @@ body {
   width: 80vw;
   border: 3px solid rgb(25, 26, 119);
   border-radius: 30px;
- box-shadow: #0a0c99;
- min-height: 24vw;
- max-height: 24vw;
+  box-shadow: #0a0c99;
+  min-height: 24vw;
+  max-height: 24vw;
   overflow-x: auto;
   overflow-y: auto;
 }
 .expenses:hover {
   box-shadow: #0a0c99 0px 0px 5px 5px;
 }
-.add-expense{ 
-margin: 1vw;
-display: flex;
-flex-direction: row;
-width:70vw ;
+.add-expense {
+  margin: 1vw;
+  display: flex;
+  flex-direction: row;
+  width: 70vw;
 }
-.add-expense h2{
+.add-expense h2 {
   justify-self: start;
   font-size: 2vw;
 }
@@ -50,7 +54,6 @@ width:70vw ;
   align-items: center;
   position: relative;
   left: 39vw;
-
 }
 .add-expense-btn {
   background-color: #09136a;
@@ -58,20 +61,20 @@ width:70vw ;
   border: 2px solid #080142;
   border-radius: 8px;
   width: 10vw;
-  height:3vw;
+  height: 3vw;
   font-size: 1.2vw;
   margin-top: 1vw;
   margin-right: 1vw;
   font-weight: 600;
   font-family: Arial, Helvetica, sans-serif;
 }
-.delete-btn{ 
+.delete-btn {
   background-color: #09136a;
   color: #ffffff;
   border: 2px solid #080142;
   border-radius: 8px;
   width: 7.2vw;
-  height:2.4vw;
+  height: 2.4vw;
   font-size: 1.1vw;
   margin-top: 1vw;
   margin-right: 1vw;
@@ -90,10 +93,109 @@ width:70vw ;
   border: 2px solid #0f0fa9;
   box-shadow: inset 0 -100px 0 0 #99d40f;
 }
+.home-container {
+  width: auto;
+  height: 3vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1vw;
+}
+
+.signing-out {
+  font-size: 1.1vw;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #0a0c99;
+}
+.out-flash {
+  justify-self: start;
+}
+.signing-in {
+  font-size: 1.5vw;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1a27da;
+}
+.title-welcome {
+  margin-top: -2vw;
+  font-size: 1.2vw;
+}
+.user-welcome {
+  height: 2vw;
+  position: relative;
+  left: 88vw;
+  top: -2vw;
+  font-size: 1.1vw;
+  width: 10vw;
+  text-align: center;
+  font-weight: 600;
+}
+.flashes {
+  display: flex;
+  flex-direction: row;
+  height: 2vw;
+}
+.expenses-empty {
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  align-items: center;
+  width: 80vw;
+  border: 3px solid rgb(25, 26, 119);
+  border-radius: 30px;
+  box-shadow: #0a0c99;
+  min-height: 24vw;
+  max-height: 24vw;
+}
+.modal {
+  position: fixed;
+  z-index: 1;
+  padding: 2em;
+/* Centering */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  overflow: auto;
+  border: 3px solid rgb(25, 26, 119);
+  border-radius: 30px;
+  box-shadow: #0a0c99;
+  /* Add the drop shadow */
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2), 0 5px 10px 0 rgba(0, 0, 0, 0.19);
+}
+.modal:hover {
+  box-shadow: #0a0c99 0px 0px 5px 5px;
+
+}
+
+
+.cancel-button {
+cursor: pointer;
+  float: right;
+  text-decoration: none;
+  background-color: #09136a;
+  color: #ffffff;
+  border: 2px solid #080142;
+  border-radius: 8px;
+  width: 7.2vw;
+  height: 2.4vw;
+  font-size: 1.1vw;
+  margin-top: 1vw;
+  margin-right: 1vw;
+  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.cancel-button:hover {
+  background-color: #e8f0cd;
+  color: #0d0640;
+  border: 2px solid #0f0fa9;
+  box-shadow: inset 0 -100px 0 0 #99d40f;
+}
+
 
 /*-----------------------------table light*/
-.table{
-  width: 70vw  ;
+.table {
+  width: 70vw;
   border-collapse: collapse;
   margin: 25px 0;
   font-size: 0.9em;
@@ -108,7 +210,7 @@ width:70vw ;
 }
 .table th,
 .table td {
-    padding: 12px 15px;
+  padding: 12px 15px;
 }
 .table tbody tr {
   border-bottom: 1px solid #dddddd;
@@ -126,9 +228,6 @@ width:70vw ;
   color: #009879;
 }
 
-
-
-
 /* ---------------------------------- navbar light*/
 .navbar {
   display: flex;
@@ -137,7 +236,7 @@ width:70vw ;
   height: 6vw;
   color: rgb(10, 10, 11);
   width: auto;
-  background-color: #add8e6;
+  background-color: whitesmoke;
 }
 .icon {
   display: flex;
@@ -148,7 +247,7 @@ width:70vw ;
   margin-right: 1vw;
   font-size: 1.2vw;
   font-weight: bold;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 .logo {
   width: 4vw;
@@ -264,92 +363,4 @@ width:70vw ;
   margin-top: 1vw;
 }
 
-/* ---------------------------------- home light*/
-.home-container {
-  width: auto;
-  height: 3vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 1vw;
-}
 
-.signing-out {
-  font-size: 1.1vw;
-  font-weight: 600;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #0a0c99;
-}
-.out-flash {
-  justify-self: start;
-}
-.signing-in {
-  font-size: 1.5vw;
-  font-weight: 600;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #1a27da;
-}
-.title-welcome {
-  margin-top: -2vw;
-  font-size: 1.2vw;
-}
-.user-welcome {
-  height: 2vw;
-  position: relative;
-  left: 88vw;
-  top: -2vw;
-  font-size: 1.1vw;
-  width: 10vw;
-  text-align: center;
-  font-weight: 600;
-}
-.flashes {
-  display: flex;
-  flex-direction: row;
-  height: 2vw;
-}
-.expenses-empty{
-  display: flex;
-  margin: auto;
-  flex-direction: column;
-  align-items: center;
-  width: 80vw;
-  border: 3px solid rgb(25, 26, 119);
-  border-radius: 30px;
- box-shadow: #0a0c99;
- min-height: 24vw;
- max-height: 24vw;
-
-}
-.modal {
-  position: fixed;
-    z-index: 1;
-    padding: 2em;
-    
-    /* Centering */
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-
-    overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 5px;
-    /* Add the drop shadow */
-    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2), 0 5px 10px 0 rgba(0,0,0,0.19);
-}
-
-.cancel-button {
-  background-color: #1530ff;
-  font-size: 12px;
-  color: white;
-  padding: 4px 8px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  float: right;
-  text-decoration: none;
-}
-.cancel-button:hover {
-  background-color: #2640fe;
-}

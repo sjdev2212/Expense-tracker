@@ -50,6 +50,8 @@ gem "sassc-rails"
 # gem "image_processing", "~> 1.2"
 # Rubocop is a Ruby static code analyzer
 gem 'rubocop', '~> 1.46'
+# Use Font Awesome 5 [
+gem "font-awesome-rails"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem

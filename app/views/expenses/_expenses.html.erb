@@ -1,6 +1,8 @@
-  <p>Total expenses</p>
-  <span>$<%= current_user.expenses.sum(:amount) %>
-  </span>
+  <div class="total-expense">
+  <p>Total expenses: <span>$<%= current_user.expenses.sum(:amount) %>
+  </span> </p>
+  
+  </div>
      
 <section class="expenses-empty" >
   <% if current_user.expenses.empty? %>

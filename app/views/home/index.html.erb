@@ -21,9 +21,12 @@
       </p>
     </div>
   <%else%>
-    <div class="user-welcome">
-      <p>
-        Please Log in or Sign up to start tracking your expenses
+    <div class="welcome-users">
+    <p> Please
+      <%=link_to " Log in ", new_user_session_path ,class:'links' %>
+      or
+        <%=link_to " Sign up ", new_user_registration_path, class:'links' %>
+        to start tracking your expenses
       </p>
     <%end%>
   </div>

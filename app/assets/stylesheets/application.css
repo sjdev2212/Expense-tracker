@@ -112,24 +112,39 @@ body {
   justify-self: start;
 }
 .signing-in {
-  font-size: 1.5vw;
+  font-size: 1.1vw;
   font-weight: 600;
   font-family: Arial, Helvetica, sans-serif;
   color: #1a27da;
 }
 .title-welcome {
-  margin-top: -2vw;
+  margin-top: -9vw;
   font-size: 1.2vw;
 }
 .user-welcome {
-  height: 2vw;
+  height: 7vw;
   position: relative;
   left: 88vw;
-  top: -2vw;
+  top: -1.8vw;
   font-size: 1.1vw;
   width: 10vw;
   text-align: center;
   font-weight: 600;
+
+  
+}
+.welcome-users {
+  height: 7vw;
+  position: relative;
+  left: 88vw;
+  top: -1.8vw;
+  font-size: 1.1vw;
+  width: 10vw;
+  text-align: center;
+  font-weight: 600;
+  border: 2px solid #080142;
+  border-radius: 8px;
+  
 }
 .flashes {
   display: flex;
@@ -190,6 +205,20 @@ cursor: pointer;
   color: #0d0640;
   border: 2px solid #0f0fa9;
   box-shadow: inset 0 -100px 0 0 #99d40f;
+}
+.links{
+  text-decoration: none;
+  color: #0a0c99;
+  font-size: 1.2vw;
+}
+.links:hover{
+  color: #ababbb;
+
+  
+}
+.total-expense { 
+  display: flex;
+ 
 }
 
 

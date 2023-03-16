@@ -337,9 +337,23 @@ cursor: pointer;
   width: 40vw;
 }
 
+
 .signup-container:hover {
   box-shadow: #95a0a0 0px 0px 5px 5px;
 }
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  margin-top: 4vw;
+  align-items: center;
+  background-color: rgb(58, 68, 68);
+  height: 32vw;
+  border-radius: 45px;
+  box-shadow: 0 3px 50px 0 rgba(0, 0, 0, 0.2), 0 1px 50px 0 rgba(0, 0, 0, 0.19);
+  width: 31vw;
+}
+
 
 .button-signup {
   background-color: #3aabab;
